@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <h4 id="gamehref">Magic 8-Ball Game</h4>
+        <h1>Number Guessing Game</h1>
+        <p class="rules">🎯 Try to guess the number between 1 and 100!</p>
+        
+        <div class="game-container">
+            <input type="number" 
+                   id="guessInput" 
+                   placeholder="Enter your guess (1-100)" 
+                   min="1" 
+                   max="100"
+                   autocomplete="off">
+            <button id="guessButton">Make a Guess</button>
+            <button id="resetButton" style="display: none;">Play Again 🎮</button>
+            <p id="resultMessage" class="message"></p>
+            
+            <div id="guessCount" class="guess-count"></div>
+            
+            <div class="history-container">
+                <h3>🎲 Previous Guesses</h3>
+                <div id="guessHistory"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script1.js"></script>
+</body>
+</html>

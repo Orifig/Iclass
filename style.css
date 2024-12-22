@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(135deg, #2a2a2a 0%, #6d6c6c 100%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h4{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #000;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 96.6px solid white;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+.triangle.grow {
+    transform: scale(1.2);
+}
+
+.triangle-text {
+    position: absolute;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+#close-btn {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    10% { transform: translate(-10px, -10px) rotate(-5deg); }
+    20% { transform: translate(10px, -10px) rotate(5deg); }
+    30% { transform: translate(-10px, 10px) rotate(-5deg); }
+    40% { transform: translate(10px, 10px) rotate(5deg); }
+    50% { transform: translate(-10px, -10px) rotate(-5deg); }
+    60% { transform: translate(10px, -10px) rotate(5deg); }
+    70% { transform: translate(-10px, 10px) rotate(-5deg); }
+    80% { transform: translate(10px, 10px) rotate(5deg); }
+    90% { transform: translate(-10px, -10px) rotate(-5deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.circle.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    animation-iteration-count: 1;
+}
